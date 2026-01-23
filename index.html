@@ -6,6 +6,9 @@
     <title>Westbridge Research - Research-Grade Peptides</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -21,8 +24,8 @@
             </div>
             <div>Research-Grade Peptides – Trusted by Scientists!</div>
             <div class="top-links">
-                <a href="#">Track your Order</a>
-                <a href="#">Terms & Conditions</a>
+                <a href="./Legal/trackorder.html">Track your Order</a>
+                <a href="./Legal/terms.html">Terms & Conditions</a>
             </div>
         </div>
     </div>
@@ -38,12 +41,13 @@
                     <li><a href="./shop.html">Shop</a></li>
                     <li><a href="./coas.html">COAs and Test Results</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="./contactus.html">Contact us</a></li>
+                    <!-- <li><a href="./contactus.html">Contact us</a></li> -->
                 </ul>
             </nav>
             <div class="header-icons">
-                <a href="#"><i class="lni lni-search-1"></i></a>
-                <a href="#"><i class="lni lni-user-4"></i></a>
+                <a href="./contactus.html" class="btn-contact">Contact us</a>
+                 <button class="search-trigger" id="searchButton"><i class="lni lni-search-1"></i></button>
+                <a href="./login.html"><i class="lni lni-user-4"></i></a>
                 <a href="#"><i class="lni lni-cart-2"></i></a>
             </div>
             <button class="mobile-menu-btn">
@@ -89,167 +93,175 @@
             </div>
         </div>
     </section>
+    <img src="./assets/Semaglutide.jpg.jpg" alt="">
 
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="products-header">
-            <h5>Trusted by Thousands Worldwide</h5>
-            <h2>Top Sellers</h2>
-            <p><strong>Bigger Orders, Bigger Savings</strong> <br> <strong>FREE SHIPPING on Orders Over $200</strong></p>
-        </div>
-        <div class="products-grid">
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/CJC-1295.jpg" alt="GLP-3 RT" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$83.50</del> $270.00</div>
-            </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">GLP-3 RT</div>
-            <button class="add-to-cart">Select Options</button>
-        </div>
+<!-- Products Section -->
+<section id="products" class="products">
+    <div class="products-header">
+        <h5>Trusted by Thousands Worldwide</h5>
+        <h2>Top Sellers</h2>
+        <p><strong>Bigger Orders, Bigger Savings</strong> <br> <strong>FREE SHIPPING on Orders Over $200</strong></p>
     </div>
+    <div class="products-grid">
+        <!-- Product 1 - Semaglutide -->
+        <a href="product-details.html?id=semaglutide-10mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/Semaglutide.jpg" alt="Semaglutide 10mg" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$95.00</del> $85.00</div>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Semaglutide 10mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('semaglutide-10mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/GLP-1.jpg" alt="CJC 1295" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$89.00</del> $78.00</div>
+        <!-- Product 2 - GLP-1 SM -->
+        <a href="product-details.html?id=glp1-sm-10mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/GLP-1.jpg" alt="GLP-1 SM" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$92.00</del> $82.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">CJC 1295 no dac + Ipamorelin 5mg/5mg</div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    </div>
+            <div class="product-info">
+                <div class="product-name">GLP-1 SM 10mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('glp1-sm-10mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/GLP-2 tirezipide.jpg" alt="KLOW 80mg" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$120.00</del> $100.00</div>
+        <!-- Product 3 - GLP-2 TZ Tirzepatide -->
+        <a href="product-details.html?id=glp2-tz-tirzepatide-10mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/GLP-2 TZ tirzepatide.jpg" alt="GLP-2 TZ Tirzepatide" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$120.00</del> $105.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">KLOW 80mg</div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    </div>
+            <div class="product-info">
+                <div class="product-name">GLP-2 TZ (Tirzepatide) 10mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('glp2-tz-tirzepatide-10mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/GLP-2.jpg" alt="Tesamorelin" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$85.00</del> $77.00</div>
+        <!-- Product 4 - GLP-2 TZ -->
+        <a href="product-details.html?id=glp2-tz-10mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/GLP-2 TZ.jpg" alt="GLP-2 TZ" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$88.00</del> $78.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">Tesamorelin 10mg</div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
-    </div>
+            <div class="product-info">
+                <div class="product-name">GLP-2 TZ 10mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('glp2-tz-10mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/GLP-3.jpg" alt="Bacteriostatic Water" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$12.50</del> $28.50</div>
+        <!-- Product 5 - GLP-3 RT -->
+        <a href="product-details.html?id=glp3-rt-10mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/GLP-3 RT.jpg" alt="GLP-3 RT" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$90.00</del> $80.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">Bacteriostatic Water</div>
-            <button class="add-to-cart">Select Options</button>
-        </div>
-    </div>
+            <div class="product-info">
+                <div class="product-name">GLP-3 RT 10mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('glp3-rt-10mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/MOTS-c.jpg" alt="GHK-Cu" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$35.00</del> $49.00</div>
+        <!-- Product 6 - MOTS-c -->
+        <a href="product-details.html?id=mots-c-10mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/MOTS-c.jpg" alt="MOTS-c" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$70.00</del> $60.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">GHK-Cu</div>
-            <button class="add-to-cart">Select Options</button>
-        </div>
-    </div>
+            <div class="product-info">
+                <div class="product-name">MOTS-c 10mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('mots-c-10mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/SELANK.jpg" alt="GLP-3 RT" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$83.50 </del>$270.00</div>
+        <!-- Product 7 - SELANK -->
+        <a href="product-details.html?id=selank-5mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/SELANK.jpg" alt="SELANK" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$52.00</del> $45.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">GLP-3 RT</div>
-            <button class="add-to-cart">Select Options</button>
-        </div>
-    </div>
+            <div class="product-info">
+                <div class="product-name">SELANK 5mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('selank-5mg')">Add to Cart</button>
+            </div>
+        </a>
 
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="./assets/TB-500.jpg" alt="CJC 1295" class="product-image">
-            <div class="product-price-overlay">
-                <div class="product-price"><del>$89.00</del> $78.00</div>
+        <!-- Product 8 - TB-500 -->
+        <a href="product-details.html?id=tb500-5mg" class="product-card">
+            <div class="product-image-wrapper">
+                <img src="./assets/TB-500.jpg" alt="TB-500" class="product-image">
+                <div class="product-price-overlay">
+                    <div class="product-price"><del>$55.00</del> $48.00</div>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <div class="product-name">CJC 1295 no dac + Ipamorelin 5mg/5mg</div>
-            <button class="add-to-cart">Add to Cart</button>
-        </div>
+            <div class="product-info">
+                <div class="product-name">TB-500 5mg</div>
+                <button class="add-to-cart" onclick="event.preventDefault(); event.stopPropagation(); addToCart('tb500-5mg')">Add to Cart</button>
+            </div>
+        </a>
     </div>
-</div>
-        </div>
-    </section>
+</section>
 
     <!-- FAQ Section -->
-    <section class="faq">
-    <div class="faq-container">
-        <div class="faq-image">
+    <section class="faqs">
+    <div class="faqs-container">
+        <div class="faqs-image">
             <img src="./assets/IMG_20260117_105926_974.jpg" alt="Laboratory">
         </div>
-        <div class="faq-content">
-            <div class="faq-header">
+        <div class="faqs-content">
+            <div class="faqs-header">
                 <h5>FAQ'S</h5>
                 <h2>HERE'S WHAT YOU SHOULD KNOW</h2>
             </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+            <div class="faqs-list">
+                <div class="faqs-item">
+                    <div class="faqs-question" onclick="toggleFaq(this)">
                         <span> What are research peptides and what are their applications?</span>
                         <i class="fas fa-minus"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faqs-answer">
                         Research peptides are compounds created solely for laboratory and scientific research purposes. They are not for human or veterinary application and are used primarily in preclinical studies, academic experiments, and product testing.
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                <div class="faqs-item">
+                    <div class="faqs-question" onclick="toggleFaq(this)">
                         <span> Have purity tests been conducted on your peptides?</span>
                         <i class="fas fa-plus"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faqs-answer">
                         Absolutely. Every Westbridge Research peptide is subjected to independent third-party testing to confirm purity, consistency, and quality. Certificates of Analysis (COAs) are supplied with each batch to ensure full transparency.
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                <div class="faqs-item">
+                    <div class="faqs-question" onclick="toggleFaq(this)">
                         <span>Can your products be legally purchased internationally?</span>
                         <i class="fas fa-plus"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faqs-answer">
                         Our products are legally available for purchase in the United States, Canada, Europe, and the UK for research purposes only. Buyers are responsible for ensuring compliance with all applicable local, state, and provincial regulations.
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
+                <div class="faqs-item">
+                    <div class="faqs-question" onclick="toggleFaq(this)">
                         <span>Who can purchase Westbridge Research products?</span>
                         <i class="fas fa-plus"></i>
                     </div>
-                    <div class="faq-answer">
+                    <div class="faqs-answer">
                         Our products are available exclusively to qualified researchers, laboratories, and institutions. We do not accept orders from individuals for personal or recreational purposes. All purchasers must be at least 18 years of age.
                     </div>
                 </div>
@@ -308,17 +320,97 @@
         </div>
     </div>
 
+        <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            <button class="search-close" id="closeSearch">×</button>
+            
+            <p class="search-instruction">Hit enter to search or ESC to close</p>
+            
+            <form class="search-form" id="searchForm">
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput"
+                        placeholder="Search..."
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-submit">→</button>
+                </div>
+            </form>
+
+            <!-- Optional: Search Results -->
+            <div class="search-results" id="searchResults">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+       <!-- Cart Overlay -->
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-overlay-backdrop"></div>
+    <div class="cart-overlay-panel">
+        <!-- Cart Header -->
+        <div class="cart-header">
+            <h2>Shopping Cart (<span id="cartItemCount">0</span>)</h2>
+            <button class="cart-close" id="closeCart">
+                <i class="lni lni-close"></i>
+            </button>
+        </div>
+
+        <!-- Cart Body -->
+        <div class="cart-body" id="cartOverlayItems">
+            <!-- Cart items will be dynamically inserted here -->
+            <div class="empty-cart-message">
+                <i class="lni lni-cart"></i>
+                <p>Your cart is empty</p>
+                <a href="./shop.html" class="btn-shop-now">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="cartShipping">$15.00</span>
+                </div>
+                <div class="shipping-notice" id="shippingNotice">
+                    <i class="lni lni-delivery"></i>
+                    <span>Add <strong id="amountToFreeShipping">$200.00</strong> more for free shipping!</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">
+                Proceed to Checkout
+                <i class="lni lni-arrow-right"></i>
+            </button>
+            <button class="btn-continue-shopping" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+</div>
+
+
     <script>
     function toggleFaq(element) {
         const faqItem = element.parentElement;
         const icon = element.querySelector('i');
-        const allFaqItems = document.querySelectorAll('.faq-item');
+        const allFaqItems = document.querySelectorAll('.faqs-item');
         
         // Close all other FAQ items
         allFaqItems.forEach(item => {
             if (item !== faqItem) {
                 item.classList.remove('active');
-                const otherIcon = item.querySelector('.faq-question i');
+                const otherIcon = item.querySelector('.faqs-question i');
                 otherIcon.classList.remove('fa-minus');
                 otherIcon.classList.add('fa-plus');
             }
@@ -364,6 +456,19 @@
             });
         });
     });
+     
+        //Add to cart placeholder function
+        function addToCart(productId) {
+            const product = getProductById(productId);
+            if (product) {
+                alert('Added to cart: ' + product.name);
+                // Later you can implement actual cart functionality
+            }
+        }
     </script>
+    <script src="./productdata.js"></script>
+    <script src="./searchdata.js"></script>
+    <script src="./search.js"></script>
+    <script src="./cart.js"></script>
 </body>
 </html>
