@@ -6,6 +6,9 @@
     <title>Westbridge Research - Research-Grade Peptides</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -21,8 +24,8 @@
             </div>
             <div>Research-Grade Peptides – Trusted by Scientists!</div>
             <div class="top-links">
-                <a href="#">Track your Order</a>
-                <a href="#">Terms & Conditions</a>
+                <a href="./Legal/trackorder.html">Track your Order</a>
+                <a href="./Legal/terms.html">Terms & Conditions</a>
             </div>
         </div>
     </div>
@@ -38,13 +41,292 @@
                     <li><a href="./shop.html">Shop</a></li>
                     <li><a href="./coas.html">COAs and Test Results</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
-                    <li><a href="./contactus.html">Contact us</a></li>
+                    <!-- <li><a href="./contactus.html">Contact us</a></li> -->
                 </ul>
             </nav>
             <div class="header-icons">
-                <a href="#"><i class="lni lni-search-1"></i></a>
-                <a href="#"><i class="lni lni-user-4"></i></a>
+                <a href="./contactus.html" class="btn-contact">Contact us</a>
+                 <button class="search-trigger" id="searchButton"><i class="lni lni-search-1"></i></button>
+                <a href="./login.html"><i class="lni lni-user-4"></i></a>
                 <a href="#"><i class="lni lni-cart-2"></i></a>
-    
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="lni lni-menu-hamburger-1"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <div class="shop-container">
+        <!-- Shop Header -->
+        <div class="shop-header">
+            <h5>Browse Our Collection</h5>
+            <h1>Shop All Products</h1>
+            <p><strong>Premium Research Peptides</strong> <br> <strong>FREE SHIPPING on Orders Over $200</strong></p>
+        </div>
+
+        <!-- Shop Layout -->
+        <div class="shop-layout">
+            <!-- Sidebar Filters -->
+            <aside class="shop-sidebar">
+                <!-- Search -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Search</h3>
+                    <input type="text" class="sidebar-search" placeholder="Search products...">
+                </div>
+
+                <!-- Filter by Price -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Filter by Price</h3>
+                    <div class="price-range">
+                        <input type="number" class="price-input" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" class="price-input" placeholder="Max" min="0">
+                    </div>
+                    <button class="filter-btn">Apply</button>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Categories</h3>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <input type="checkbox" id="cat1">
+                            <label for="cat1">Westbridgeresearch (29)</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="cat2">
+                            <label for="cat2">Capsules (1)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Status</h3>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <input type="checkbox" id="stock1">
+                            <label for="stock1">In Stock</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="stock2">
+                            <label for="stock2">Out of Stock</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="sidebar-section">
+                    <h3 class="sidebar-title">Rating</h3>
+                    <div class="filter-group">
+                        <div class="filter-item">
+                            <input type="checkbox" id="rate5">
+                            <label for="rate5">⭐⭐⭐⭐⭐</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="rate4">
+                            <label for="rate4">⭐⭐⭐⭐</label>
+                        </div>
+                        <div class="filter-item">
+                            <input type="checkbox" id="rate3">
+                            <label for="rate3">⭐⭐⭐</label>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="shop-main">
+                <!-- Results Bar -->
+                <div class="results-bar">
+                    <span class="results-count">Showing 1–12 of 29 results</span>
+                    <select class="sort-dropdown">
+                        <option>Default sorting</option>
+                        <option>Sort by popularity</option>
+                        <option>Sort by average rating</option>
+                        <option>Sort by latest</option>
+                        <option>Sort by price: low to high</option>
+                        <option>Sort by price: high to low</option>
+                    </select>
+                </div>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <!-- <div class="products-header">
+                <h5>Trusted by Thousands Worldwide</h5>
+                <h2>Top Sellers</h2>
+                <p><strong>Bigger Orders, Bigger Savings</strong> <br> <strong>FREE SHIPPING on Orders Over $200</strong></p>
+            </div> -->
+            <div class="shop-products-grid" id="productsGrid">
+            <!-- Products will be loaded here dynamically -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="shop-pagination" id="pagination">
+                <!-- Pagination will be loaded here dynamically -->
+            </div>
+            </main>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="./assets/Whitelogo-01-01-01-01.png" alt="">
+                <p>Westbridge Research is a leading supplier of research-grade peptides, dedicated to providing outstanding quality at competitive rates. All compounds undergo purity testing to consistently meet the highest standards.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick links</h4>
+                <a href="./index.html">Home</a>
+                <a href="./aboutus.html">About us</a>
+                <a href="./shop.html">Shop</a>
+                <a href="./coas.html">COAs and Test Results</a>
+                <a href="./faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="./Legal/trackorder.html">Track your Order</a>
+                <a href="./Legal/refund.html">Refund & Return</a>
+                <a href="./Legal/shipping.html">Shipping policy</a>
+                <a href="./Legal/privacy.html">Privacy policy</a>
+                <a href="./Legal/terms.html">Terms & Conditions</a>
+            </div>
+            <div class="footer-section">
+                <h4>Get In Touch</h4>
+                <a href="mailto:info@westbridgeresearch.shop">info@westbridgeresearch.shop</a>
+                <p>15257 Amberly Dr<br>Ste 156<br>Tampa, FL 33647</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Westbridge Research.</p>
+        </div>
+    </footer>
+
+    <div class="disclaimer">
+        <div class="disclaimer-content">
+            <h3>FDA Disclaimer</h3>
+            <p>The statements made within this website have not been evaluated by the US Food and Drug Administration. The statements and the products of this company are not intended to diagnose, treat, cure or prevent any disease. All products are for laboratory developmental research USE ONLY. Products are not for human consumption.</p>
+            <p>Westbridge Research is a chemical supplier. Westbridge Research is not a compounding pharmacy or chemical compounding facility as defined under 503A of the Federal Food, Drug, and Cosmetic act. Westbridge Research is not an outsourcing facility as defined under 503B of the Federal Food, Drug, and Cosmetic act.</p>
+            <p class="disclaimer-warning">THE PRODUCTS WE OFFER ARE NOT INTENDED FOR HUMAN USE. THEY ARE INTENDED FOR IN-VITRO AND PRE-CLINICAL RESEARCH PURPOSES ONLY. THE CUSTOMER ACKNOWLEDGES THAT THERE ARE RISKS IN THE HANDLING, USE, AND DISTRIBUTION OF THESE PRODUCTS, AND CERTIFIES THAT IT HAS THE PROPER EQUIPMENT, FACILITIES, AND PERSONNEL FOR MANAGING THOSE RISKS; AND THE CUSTOMER KNOWINGLY ACCEPTS THESE RISKS.</p>
+        </div>
+    </div>
+
+        <div class="search-overlay" id="searchOverlay">
+        <div class="search-overlay-content">
+            <button class="search-close" id="closeSearch">×</button>
+            
+            <p class="search-instruction">Hit enter to search or ESC to close</p>
+            
+            <form class="search-form" id="searchForm">
+                <div class="search-input-wrapper">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput"
+                        placeholder="Search..."
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-submit">→</button>
+                </div>
+            </form>
+
+            <!-- Optional: Search Results -->
+            <div class="search-results" id="searchResults">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+       <!-- Cart Overlay -->
+<div class="cart-overlay" id="cartOverlay">
+    <div class="cart-overlay-backdrop"></div>
+    <div class="cart-overlay-panel">
+        <!-- Cart Header -->
+        <div class="cart-header">
+            <h2>Shopping Cart (<span id="cartItemCount">0</span>)</h2>
+            <button class="cart-close" id="closeCart">
+                <i class="lni lni-close"></i>
+            </button>
+        </div>
+
+        <!-- Cart Body -->
+        <div class="cart-body" id="cartOverlayItems">
+            <!-- Cart items will be dynamically inserted here -->
+            <div class="empty-cart-message">
+                <i class="lni lni-cart"></i>
+                <p>Your cart is empty</p>
+                <a href="./shop.html" class="btn-shop-now">Shop Now</a>
+            </div>
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="cartSubtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping:</span>
+                    <span id="cartShipping">$15.00</span>
+                </div>
+                <div class="shipping-notice" id="shippingNotice">
+                    <i class="lni lni-delivery"></i>
+                    <span>Add <strong id="amountToFreeShipping">$200.00</strong> more for free shipping!</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">
+                Proceed to Checkout
+                <i class="lni lni-arrow-right"></i>
+            </button>
+            <button class="btn-continue-shopping" id="continueShopping">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        // Toggle menu when hamburger is clicked
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when clicking the X or outside the menu
+        nav.addEventListener('click', function(e) {
+            if (e.target === nav || e.target.matches('nav::before')) {
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    });
+
+    </script>
+    <script src="./productdata.js"></script>
+    <script src="./script.js"></script>
+    <script src="./searchdata.js"></script>
+    <script src="./search.js"></script>
+    <script src="./cart.js"></script>
+
 </body>
 </html>
